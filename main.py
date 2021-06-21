@@ -59,7 +59,7 @@ class MyGame(arcade.Window):
         self.player_list.draw()
 
     def on_key_press(self, key, modifiers):
-        if key == arcade.key.UP or arcade.key.W:
+        if key == arcade.key.UP or key == arcade.key.W:
             if self.physics_engine.can_jump():
                 self.player_sprite.change_y = PLAYER_JUMP_SPEED
         elif key == arcade.key.LEFT or key == arcade.key.A:
