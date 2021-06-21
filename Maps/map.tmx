@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="128" tileheight="128" infinite="0" nextlayerid="3" nextobjectid="8">
+ <tileset firstgid="1" name="my_tiles" tilewidth="128" tileheight="128" tilecount="35" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grass - Copy.png"/>
+  </tile>
+  <tile id="1">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grass.png"/>
+  </tile>
+  <tile id="2">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grass_sprout.png"/>
+  </tile>
+  <tile id="3">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCenter - Copy.png"/>
+  </tile>
+  <tile id="4">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCenter.png"/>
+  </tile>
+  <tile id="5">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCenter_round - Copy.png"/>
+  </tile>
+  <tile id="6">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCenter_round.png"/>
+  </tile>
+  <tile id="7">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliff_left - Copy.png"/>
+  </tile>
+  <tile id="8">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliff_left.png"/>
+  </tile>
+  <tile id="9">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliff_right.png"/>
+  </tile>
+  <tile id="10">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliffAlt_left - Copy.png"/>
+  </tile>
+  <tile id="11">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliffAlt_left.png"/>
+  </tile>
+  <tile id="12">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliffAlt_right - Copy.png"/>
+  </tile>
+  <tile id="13">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCliffAlt_right.png"/>
+  </tile>
+  <tile id="14">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCorner_left - Copy.png"/>
+  </tile>
+  <tile id="15">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCorner_left.png"/>
+  </tile>
+  <tile id="16">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassCorner_right.png"/>
+  </tile>
+  <tile id="17">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHalf.png"/>
+  </tile>
+  <tile id="18">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHalf_left.png"/>
+  </tile>
+  <tile id="19">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHalf_mid.png"/>
+  </tile>
+  <tile id="20">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHalf_right.png"/>
+  </tile>
+  <tile id="21">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHill_left.png"/>
+  </tile>
+  <tile id="22">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHill_right.png"/>
+  </tile>
+  <tile id="23">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassLeft.png"/>
+  </tile>
+  <tile id="24">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassMid.png"/>
+  </tile>
+  <tile id="25">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassRight.png"/>
+  </tile>
+  <tile id="26">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/ladderMid.png"/>
+  </tile>
+  <tile id="27">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/ladderTop.png"/>
+  </tile>
+  <tile id="28">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/signExit.png"/>
+  </tile>
+  <tile id="29">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/signLeft.png"/>
+  </tile>
+  <tile id="30">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/signRight.png"/>
+  </tile>
+  <tile id="31">
+   <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/items/coinGold.png"/>
+  </tile>
+  <tile id="32">
+   <image width="64" height="64" source="../venv/Lib/site-packages/arcade/resources/images/items/gold_1.png"/>
+  </tile>
+  <tile id="33">
+   <image width="64" height="64" source="../venv/Lib/site-packages/arcade/resources/images/items/gold_2.png"/>
+  </tile>
+  <tile id="34">
+   <image width="64" height="64" source="../venv/Lib/site-packages/arcade/resources/images/items/gold_3.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="Platforms" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAS0BEx0wABH4ADM=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Coins">
+  <object id="1" gid="33" x="784.667" y="1973.67" width="64" height="64"/>
+  <object id="2" gid="33" x="518" y="2307" width="64" height="64"/>
+  <object id="3" gid="33" x="1243" y="2223.67" width="64" height="64"/>
+  <object id="4" gid="33" x="1801.33" y="1907" width="64" height="64"/>
+  <object id="5" gid="33" x="2109.67" y="2232" width="64" height="64"/>
+  <object id="6" gid="33" x="2643" y="1982" width="64" height="64"/>
+  <object id="7" gid="33" x="2793" y="1932" width="64" height="64"/>
+ </objectgroup>
+</map>
