@@ -169,7 +169,7 @@ class MyGame(arcade.Window):
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.UP or key == arcade.key.W:
-            if self.player_sprite.jump < 2:
+            if self.player_sprite.jump < 1:
                 self.player_sprite.jump += 1
                 self.player_sprite.change_y = PLAYER_JUMP_SPEED
                 arcade.play_sound(self.jump_sound)
@@ -228,7 +228,7 @@ class MyGame(arcade.Window):
                                 self.view_bottom,
                                 SCREEN_HEIGHT + self.view_bottom)
 
-        if self.physics_engine.can_jump() and self.player_sprite.jump == 2:
+        if self.physics_engine.can_jump() and self.player_sprite.jump != 0:
             self.player_sprite.jump = 0
 
         self.player_list.update()
