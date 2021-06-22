@@ -1,18 +1,19 @@
 import arcade
+from icecream import ic
 
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 SCREEN_TITLE = "Platformer"
 
-CHARACTER_SCALING = 0.5
+CHARACTER_SCALING = 0.4
 TILE_SCALING = 0.25
 COIN_SCALING = 0.5
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = (SPRITE_PIXEL_SIZE * TILE_SCALING)
 
 PLAYER_MOVEMENT_SPEED = 5 * CHARACTER_SCALING
-GRAVITY = 0.9
-PLAYER_JUMP_SPEED = 10
+GRAVITY = 0.25
+PLAYER_JUMP_SPEED = 5
 
 LEFT_VIEWPOINT_MARGIN = 250
 RIGHT_VIEWPOINT_MARGIN = 250
@@ -31,6 +32,8 @@ class Player(arcade.Sprite):
         self.textures = []
         self.mirrored = False
         self.frame = 0
+        self._jump = 0
+
 
         self.jump_texture = arcade.load_texture(
             ":resources:images/animated_characters/female_adventurer/femaleAdventurer_jump.png")
@@ -45,6 +48,14 @@ class Player(arcade.Sprite):
             self.textures.append(texture)
 
         self.texture = self.idle_texture
+
+    @property
+    def jump(self):
+        return self._jump
+
+    @jump.setter
+    def jump(self, value):
+        self._jump = ic(value)
 
     def update(self):
         if self.frame + 1 == len(self.textures):
@@ -70,6 +81,7 @@ class Player(arcade.Sprite):
 
         if self.velocity == [0, 0]:
             self.texture = self.idle_texture
+            self.number_of_jumps = 0
 
 
 class MyGame(arcade.Window):
@@ -157,13 +169,16 @@ class MyGame(arcade.Window):
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.UP or key == arcade.key.W:
-            if self.physics_engine.can_jump():
+            if self.player_sprite.jump < 2:
+                self.player_sprite.jump += 1
                 self.player_sprite.change_y = PLAYER_JUMP_SPEED
                 arcade.play_sound(self.jump_sound)
         elif key == arcade.key.LEFT or key == arcade.key.A:
             self.player_sprite.change_x = -PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
+        elif key == arcade.key.R:
+            self.setup()
 
     def on_key_release(self, key, modifiers):
         if key == arcade.key.LEFT or key == arcade.key.A:
@@ -212,6 +227,9 @@ class MyGame(arcade.Window):
                                 SCREEN_WIDTH + self.view_left,
                                 self.view_bottom,
                                 SCREEN_HEIGHT + self.view_bottom)
+
+        if self.physics_engine.can_jump() and self.player_sprite.jump == 2:
+            self.player_sprite.jump = 0
 
         self.player_list.update()
 
