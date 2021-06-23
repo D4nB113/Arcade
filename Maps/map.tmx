@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="3" nextobjectid="14">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="12" nextobjectid="26">
  <tileset firstgid="1" name="my_tiles" tilewidth="128" tileheight="128" tilecount="154" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="1">
@@ -72,6 +72,9 @@
    <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/signRight.png"/>
   </tile>
   <tile id="31">
+   <properties>
+    <property name="Points" type="int" value="1"/>
+   </properties>
    <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/items/coinGold.png"/>
   </tile>
   <tile id="32">
@@ -467,16 +470,31 @@
  </tileset>
  <layer id="1" name="Platforms" width="50" height="20">
   <data encoding="base64" compression="zlib">
-   eJztz6EKACAMRVERDNqM/r5f6gaGBYswFOUeeLC4GwIAAAAA/KfLmpnK8y63ntqkDVWWzF6zavDuiAe2avDuGIyvAv8=
+   eJztzzEKACAMBMEg+AALRb/vS41dipRBCezA9nciAAAAyGpq4/cIIEg3RdjaMmV0PzStmrLxPkT/KA/yPkT/OOKyA0A=
   </data>
  </layer>
- <objectgroup id="2" name="Coins">
-  <object id="1" gid="33" x="784.667" y="1973.67" width="64" height="64"/>
-  <object id="2" gid="33" x="518" y="2307" width="64" height="64"/>
-  <object id="3" gid="33" x="1243" y="2223.67" width="64" height="64"/>
-  <object id="4" gid="33" x="1801.33" y="1907" width="64" height="64"/>
-  <object id="5" gid="33" x="2109.67" y="2232" width="64" height="64"/>
-  <object id="6" gid="33" x="2643" y="1982" width="64" height="64"/>
-  <object id="7" gid="33" x="2793" y="1932" width="64" height="64"/>
+ <objectgroup draworder="index" id="7" name="Moving Platforms">
+  <object id="20" gid="25" x="1536" y="2176" width="128" height="128">
+   <properties>
+    <property name="boundary_left" type="float" value="650"/>
+    <property name="boundary_right" type="float" value="800"/>
+    <property name="change_x" type="float" value="1"/>
+   </properties>
+  </object>
  </objectgroup>
+ <layer id="5" name="Ladders" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0QENADAIA0F8DP86Z4IAW+4UfNMIAADYIacDipzpgCKdO3y/yy87XnMBJQYApQ==
+  </data>
+ </layer>
+ <layer id="4" name="Background" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+  </data>
+ </layer>
+ <layer id="6" name="Coins" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzgEBACAMA6BHWf+Uxph6SMAMAAAvSjvwkbQDrJF2gKsdoC8AYQ==
+  </data>
+ </layer>
 </map>
