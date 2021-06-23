@@ -99,7 +99,10 @@ class Player(arcade.Sprite):
             return
 
         # Jumping
-        if self.change_y > 0 and not self.is_on_ladder:
+        if 0 > self.change_y > -2:
+            self.texture = self.idle_texture_pair[self.character_face_direction]
+            return
+        elif self.change_y > 0 and not self.is_on_ladder:
             self.texture = self.jump_texture_pair[self.character_face_direction]
             return
         elif self.change_y < 0 and not self.is_on_ladder:
@@ -237,7 +240,7 @@ class MyGame(arcade.Window):
             self.player_sprite.change_x = 0
 
     def on_key_press(self, key, modifiers):
-        if key == arcade.key.UP or key == arcade.key.W:
+        if key == arcade.key.UP or key == arcade.key.W or key == arcade.key.SPACE:
             self.up_pressed = True
             self.jump_needs_reset = False
         elif key == arcade.key.LEFT or key == arcade.key.A:
@@ -248,6 +251,8 @@ class MyGame(arcade.Window):
             self.down_pressed = True
         elif key == arcade.key.R:
             self.setup()
+        elif key == arcade.key.F:
+            self.set_fullscreen(not self.fullscreen)
 
         self.process_keychange()
 

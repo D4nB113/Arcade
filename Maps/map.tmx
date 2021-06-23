@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="12" nextobjectid="26">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="250" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="12" nextobjectid="28">
  <tileset firstgid="1" name="my_tiles" tilewidth="128" tileheight="128" tilecount="154" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="1">
@@ -468,9 +468,9 @@
    <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/tiles/grassHill_right.png"/>
   </tile>
  </tileset>
- <layer id="1" name="Platforms" width="50" height="20">
+ <layer id="1" name="Platforms" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJztzzEKACAMBMEg+AALRb/vS41dipRBCezA9nciAAAAyGpq4/cIIEg3RdjaMmV0PzStmrLxPkT/KA/yPkT/OOKyA0A=
+   eJzt2sEKgkAUQNEhaF+LIvv68EtLIjCISaVG58058Lbq5joor0vploDQOp1DeDqH+Nbs/PK8f3bOaz0cBLJm5/sJc0j51vvHXNP39wW0bOud51ofGj9OvAa0rIbOP7U+p3Gd07paOh+3PrdxndO6mjp/tT63cZ3Tuto6XzrQMp1DfDqH+Ep2PuzFjP+Z6xzKcJ57FxCfznVOfDrXOfHlOj+N5hf69L5zXrJz3++0rNR5vmSHTefwGyU633rjOie6YY909+fZeuM6J7o7j84exQ==
   </data>
  </layer>
  <objectgroup draworder="index" id="7" name="Moving Platforms">
@@ -481,20 +481,27 @@
     <property name="change_x" type="float" value="1"/>
    </properties>
   </object>
+  <object id="26" gid="19" x="2176" y="2048" width="128" height="128">
+   <properties>
+    <property name="boundary_bottom" type="float" value="150"/>
+    <property name="boundary_top" type="float" value="600"/>
+    <property name="change_y" type="float" value="1"/>
+   </properties>
+  </object>
  </objectgroup>
- <layer id="5" name="Ladders" width="50" height="20">
+ <layer id="5" name="Ladders" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt0QENADAIA0F8DP86Z4IAW+4UfNMIAADYIacDipzpgCKdO3y/yy87XnMBJQYApQ==
+   eJzt27ENwDAMBDHvkew/ZwZILdg+kBN8c1CltQAAAP7e3QOAcc/uAcA4nUOfzqFP59Cnc+jTOfTpHPp0Dn06hz6dQ5/OoU/ncAa/JtDn5kKfzgHgHh+b2gGz
   </data>
  </layer>
- <layer id="4" name="Background" width="50" height="20">
+ <layer id="6" name="Coins" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+   eJztzrEJwDAQBEGVcv1XqdSpwehkfgY237UA/iWPAAAAAAAAAAAA4I20B4ArpD0AAMOlPQAAHJP2APCptAcAAGCQDVGWAQE=
   </data>
  </layer>
- <layer id="6" name="Coins" width="50" height="20">
+ <layer id="4" name="Background" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJztzgEBACAMA6BHWf+Uxph6SMAMAAAvSjvwkbQDrJF2gKsdoC8AYQ==
+   eJztzrEJACAQBEH7swc7Ey1VAz81EDSQGVi48FICAAB4o8zyKsSu7+8AAAAAAAAAAAAAwJG+CfhD2wQAAAAAtw1uqwqW
   </data>
  </layer>
 </map>
