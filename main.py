@@ -54,8 +54,8 @@ class Player(arcade.Sprite):
         self.cur_texture = 0
         self.character_face_direction = FACING_RIGHT
 
-        main_path = ":resources:images/animated_characters/female_adventurer/femaleAdventurer"
-        # main_path = ":resources:images/animated_characters/female_person/femalePerson"
+        # main_path = ":resources:images/animated_characters/female_adventurer/femaleAdventurer"
+        main_path = ":resources:images/animated_characters/female_person/femalePerson"
         # main_path = ":resources:images/animated_characters/male_person/malePerson"
         # main_path = ":resources:images/animated_characters/male_adventurer/maleAdventurer"
         # main_path = ":resources:images/animated_characters/zombie/zombie"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="250" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="12" nextobjectid="28">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="250" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#92b8ca" nextlayerid="12" nextobjectid="34">
  <tileset firstgid="1" name="my_tiles" tilewidth="128" tileheight="128" tilecount="154" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="1">
@@ -78,6 +78,9 @@
    <image width="128" height="128" source="../venv/Lib/site-packages/arcade/resources/images/items/coinGold.png"/>
   </tile>
   <tile id="32">
+   <properties>
+    <property name="Points" type="int" value="5"/>
+   </properties>
    <image width="64" height="64" source="../venv/Lib/site-packages/arcade/resources/images/items/gold_1.png"/>
   </tile>
   <tile id="33">
@@ -470,38 +473,51 @@
  </tileset>
  <layer id="1" name="Platforms" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt2sEKgkAUQNEhaF+LIvv68EtLIjCISaVG58058Lbq5joor0vploDQOp1DeDqH+Nbs/PK8f3bOaz0cBLJm5/sJc0j51vvHXNP39wW0bOud51ofGj9OvAa0rIbOP7U+p3Gd07paOh+3PrdxndO6mjp/tT63cZ3Tuto6XzrQMp1DfDqH+Ep2PuzFjP+Z6xzKcJ57FxCfznVOfDrXOfHlOj+N5hf69L5zXrJz3++0rNR5vmSHTefwGyU633rjOie6YY909+fZeuM6J7o7j84exQ==
+   eJzt2FEKgkAUQFEJ+i/LwN21tGilKVFNIWqlY7zOgQeC4PhzGce6KE4FEFqtcwhP5xCfziE+nUN8Oof4dA7x6Rzi0znEN6bzcsT1rpn9y1QTvB/wvaHOy76bHzpf173PYYY1gIclvtubNY9LvwP8k1/oHJhXV+ddZ+2heecsrnPIa6n9PD2fpwNMz3c7xNfXeZXMFG7/2bcTPQ8YJ9d+3jbe9r3OsRjwJEfnaeM6h/w2zaxmnrRxnUN+F76lFyM=
   </data>
  </layer>
  <objectgroup draworder="index" id="7" name="Moving Platforms">
-  <object id="20" gid="25" x="1536" y="2176" width="128" height="128">
+  <object id="28" gid="19" x="3328" y="1024" width="128" height="128">
    <properties>
-    <property name="boundary_left" type="float" value="650"/>
-    <property name="boundary_right" type="float" value="800"/>
+    <property name="boundary_bottom" type="float" value="150"/>
+    <property name="boundary_left" type="float" value="1600"/>
+    <property name="boundary_right" type="float" value="1800"/>
+    <property name="boundary_top" type="float" value="600"/>
     <property name="change_x" type="float" value="1"/>
    </properties>
   </object>
-  <object id="26" gid="19" x="2176" y="2048" width="128" height="128">
+  <object id="32" gid="43" x="2432" y="1920" width="128" height="128">
    <properties>
     <property name="boundary_bottom" type="float" value="150"/>
+    <property name="boundary_left" type="float" value="1216"/>
+    <property name="boundary_right" type="float" value="1472"/>
     <property name="boundary_top" type="float" value="600"/>
-    <property name="change_y" type="float" value="1"/>
+    <property name="change_x" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="33" gid="43" x="2944" y="1920" width="128" height="128">
+   <properties>
+    <property name="boundary_bottom" type="float" value="150"/>
+    <property name="boundary_left" type="float" value="1477"/>
+    <property name="boundary_right" type="float" value="1605"/>
+    <property name="boundary_top" type="float" value="600"/>
+    <property name="change_x" type="float" value="1"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="5" name="Ladders" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt27ENwDAMBDHvkew/ZwZILdg+kBN8c1CltQAAAP7e3QOAcc/uAcA4nUOfzqFP59Cnc+jTOfTpHPp0Dn06hz6dQ5/OoU/ncAa/JtDn5kKfzgHgHh+b2gGz
+   eJzt00ENAEAIBDF8HP51nooNgbQK5jNVAAAAAAAAAAAAAAAAAJDT0wFA3JsOAOJ8Dvf5HO7zOQDs8QGWqACJ
   </data>
  </layer>
  <layer id="6" name="Coins" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJztzrEJwDAQBEGVcv1XqdSpwehkfgY237UA/iWPAAAAAAAAAAAA4I20B4ArpD0AAMOlPQAAHJP2APCptAcAAGCQDVGWAQE=
+   eJztzjENAAAIwDCkgH+TvDiAhDbZvwgAAAAAAAAA4ILcHgAAAICnagQAAAAAAAAA2xoAegCE
   </data>
  </layer>
  <layer id="4" name="Background" width="250" height="20">
   <data encoding="base64" compression="zlib">
-   eJztzrEJACAQBEH7swc7Ey1VAz81EDSQGVi48FICAAB4o8zyKsSu7+8AAAAAAAAAAAAAwJG+CfhD2wQAAAAAtw1uqwqW
+   eJzt0zERADAIBMG3gftIZRDBhGJXwTWXAAAAAAAAAAAAAAAAo5L3uwHY5XMAAAAAAACua+XXAXM=
   </data>
  </layer>
 </map>
